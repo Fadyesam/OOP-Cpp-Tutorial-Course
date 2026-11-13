@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.10)
+project(CPP_Lecture6_Inheritance CXX)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if (MSVC)
+  add_compile_options(/utf-8)   # لدعم التعليقات العربية في Visual Studio
+endif()
+# كل ملف .cpp في src برنامج مستقل (لكل ملف main)
+file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+foreach(src ${SOURCES})
+  get_filename_component(name ${src} NAME_WE)
+  add_executable(${name} ${src})
+endforeach()

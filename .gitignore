@@ -1,0 +1,30 @@
+# ---- Build outputs (never commit compiled files) ----
+build/
+bin/
+*.exe
+*.out
+*.o
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.a
+section_3/Circle_Project/circle_app
+
+# ---- CMake generated ----
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# ---- IDE / editor ----
+.vs/
+.idea/
+*.user
+*.code-workspace
+.vscode/*
+!.vscode/tasks.json
+
+# ---- OS ----
+.DS_Store
+Thumbs.db

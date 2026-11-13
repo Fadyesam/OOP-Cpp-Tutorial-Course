@@ -1,0 +1,13 @@
+name: Build all examples
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run every example
+        run: bash scripts/build_all.sh
